@@ -124,7 +124,7 @@ def check_feature_set(feature_sets):
 
     for set in feature_sets.keys():
         if np.any(np.isnan(feature_sets[set].values)):
-            raise Exception("found Nan in set %s" % set)
+            raise Exception("found Nan in values of feature set %s" % set)
 
 
 def NGGX_interaction_feature(data, pam_audit=True):
@@ -544,7 +544,7 @@ def normalize_feature_sets(feature_sets):
     for set in feature_sets:
          new_feature_sets[set] = normalize_features(feature_sets[set],axis=0)
          if np.any(np.isnan(new_feature_sets[set].values)):
-             raise Exception("found Nan feature values in set=%s" % set)
+             raise Exception("found Nan in values of feature set %s" % set)
          assert new_feature_sets[set].shape[1] > 0, "0 columns of features"
     t2 = time.time()
     print "\t\tElapsed time for normalizing features is %.2f seconds" % (t2-t1)
