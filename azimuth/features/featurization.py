@@ -123,7 +123,7 @@ def check_feature_set(feature_sets):
             assert N == N2, "# of individuals do not match up across feature sets"
 
     for set in feature_sets.keys():
-        if np.any(np.isnan(feature_sets[set])):
+        if np.any(np.isnan(feature_sets[set].values)):
             raise Exception("found Nan in set %s" % set)
 
 
