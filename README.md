@@ -82,10 +82,8 @@ Although the data used for training were in the range 0.0 to 1.0, the prediction
 
 #### Generating new model .pickle files
 
-Sometimes the pre-computed .pickle files in the saved_models directory are incompatible with different versions of scikitlearn. You can re-train the files saved_models/V3_model_full.pickle and saved_models/V3_model_nopos.pickle by running the command python model_comparison.py (which will overwrite the saved models). You can check that the resulting models match the models we precomputed by running python test_saved_models.py within the directory tests.
+Sometimes the pre-computed `.pickle` files in the `saved_models` directory are incompatible with different versions of scikitlearn. You can re-train the files `saved_models/V3_model_full.pickle` and `saved_models/V3_model_nopos.pickle` by running the command `python model_comparison.py` (which will overwrite the saved models). You can check that the resulting models match the models we precomputed by running `python test_saved_models.py` within the directory tests.
 
 #### Contacting us
 
 You can submit bug reports using the GitHub issue tracker. If you have any other questions, please contact us at crispr@lists.research.microsoft.com.
-
-
